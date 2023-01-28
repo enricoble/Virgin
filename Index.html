@@ -1,0 +1,2543 @@
+
+ <!DOCTYPE html> <html lang="en"> <head> <!-- template: base --> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" /> <meta charset="utf-8" /> <title>
+	Virgin Active Italia - Centri fitness, palestre e centri benessere
+</title> <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" /> <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" /> <link rel="manifest" href="/manifest.json" /> <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#e10a0a" /> <script>
+    var createCookie = function (name, value, hours) {
+        var expires;
+        if (hours) {
+            if (hours > 0) {
+                var date = new Date();
+                date.setTime(date.getTime() + (hours * 60 * 60 * 1000));
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "; expires=Thu, 01 Jan 1970 00:00:01 GMT";
+            }
+        }
+        else {
+            expires = "";
+        }
+        document.cookie = name + "=" + value + expires + "; path=/";
+    }
+
+    var getCookie = function (name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+    }
+
+    var deleteCookie = function (name) {
+        createCookie(name, '', -1);
+    }
+
+    if (!('remove' in Element.prototype)) {
+        Element.prototype.remove = function () {
+            if (this.parentNode) {
+                this.parentNode.removeChild(this);
+            }
+        };
+    }
+
+    function onPreferenceExpressedOrNotNeeded(consent) {
+        createCookie("statistics", consent.purposes[4]);
+        createCookie("tracking", consent.purposes[5]);
+
+        dataLayer.push({
+            iubenda_ccpa_opted_out: _iub.cs.api.isCcpaOptedOut()
+        });
+
+        if (!consent) {
+            dataLayer.push({
+                event: "iubenda_preference_not_needed"
+            });
+        } else {
+            if (consent.consent === true) {
+                dataLayer.push({
+                    event: "iubenda_consent_given"
+                });
+            } else if (consent.consent === false) {
+                dataLayer.push({
+                    event: "iubenda_consent_rejected"
+                });
+            } else if (consent.purposes) {
+                for (var purposeId in consent.purposes) {
+                    if (consent.purposes[purposeId]) {
+                        dataLayer.push({
+                            event: "iubenda_consent_given_purpose_" + purposeId
+                        });
+                    }
+                }
+            }
+        }
+
+        if (consent.purposes[4] && consent.purposes[5]) {
+            loadAndTrack(true);
+        } else {
+            loadAndTrack(false);
+        }
+    }
+
+    dataLayer = [{
+        'cookieLaw': (getCookie("tracking") == "false" ? 0 : 1)
+    }];
+
+    function loadGTM(w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+            'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0];
+        var j = d.createElement(s);
+        var dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    }
+
+    loadGTM(window, document, 'script', 'dataLayer', 'GTM-5PR3D55');
+
+</script> <!--Iubenda--> <script type="text/javascript">
+        var _iub = _iub || [];
+        _iub.csConfiguration = {
+            "gdprAppliesGlobally": false,
+            "invalidateConsentWithoutLog": true,
+            "cookiePolicyInOtherWindow": true,
+            "consentOnContinuedBrowsing": false,
+            "perPurposeConsent": true,
+            "whitelabel": false,
+            "lang": "it",
+            "siteId": 1972045,
+            "localConsentDomain": "virginactive.it",
+            "enableRemoteConsent": true,
+            "cookiePolicyId": 81291215,
+            "cookiePolicyUrl": "https://www.virginactive.it/cookie",
+            "banner": {
+                "brandBackgroundColor": "none",
+                "brandTextColor": "black",
+                "logo": "https://vai2018i1.azureedge.net/images/default-source/default-album/logo-174px.png?sfvrsn=e6756acd_2",
+                "acceptButtonDisplay": true,
+                "customizeButtonDisplay": true,
+                "acceptButtonColor": "#e10a0a",
+                "acceptButtonCaptionColor": "white",
+                "customizeButtonColor": "#DADADA",
+                "customizeButtonCaptionColor": "#4D4D4D",
+                "rejectButtonDisplay": true,
+                "rejectButtonColor": "#000000",
+                "rejectButtonCaptionColor": "white",
+                "position": "float-top-center",
+                "textColor": "black",
+                "backgroundColor": "white",
+                "closeButtonRejects": true,
+                "content": '<div id=\"iubenda-cs-paragraph\"><p class=\"iub-p\">Virgin Active Italia S.p.A. utilizza su questo sito cookie tecnici di prima parte (necessari) e cookie di terze parti (marketing e profilazione).</br>\nCon il pulsante Accetta acconsenti all\'uso di tutti i cookie del sito. Cliccando sul pulsante Rifiuta, verranno serviti sul tuo terminale i soli cookie tecnici necessari al funzionamento del sito; la stessa cosa accadrà  cliccando sul comando contraddistinto dalla "X" posta in alto a destra del presente banner.</br>\nCliccando su Scopri di più e personalizza invece puoi liberamente conferire o revocare il consenso a tutti o alcuni dei trattamenti modificando le tue preferenze.\nPer maggiori dettagli, consulta la nostra <a href=\"https://www.virginactive.it/cookie\" class=\"iubenda-cs-cookie-policy-lnk\" target=\"_blank\" rel=\"noopener\">cookie policy</a>  alla pagina dedicata.</p></div>'
+            },
+            "callback": {
+                "onPreferenceExpressedOrNotNeeded": onPreferenceExpressedOrNotNeeded,
+            }
+        };
+</script> <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script> <!-- End Iubenda --> <meta name="theme-color" content="#ffffff" /> <script src="/ScriptResource.axd?d=4bMApOb58R6igmkUEZ0eXglMF5Haxi5nDzbwYhmlM1eUWLu8uaBJTk3jpuZ1TH_WVOpsPDIbVAj9Db5d41kvs-UfmTw23cLeg15ypsFhbsiXztOPlQPMxZdFf7JbhWkXBQBbNhNF_xx-fJ8Ha2MnY1EzUp3EpOXeB77-B-QKQznSZgWv0&amp;t=ffffffffd99926d3" type="text/javascript"></script><script src="/ScriptResource.axd?d=EydukmxBmDstn7gSYzQESLnMvrpHPxO-6DSllI5q07VxQ0feWmlWh22c2mBib80zdyBkGRuJyiMmXSb-bt02-jjGlD2EzXD4GMWFOmKX9PTOyAd-lswJQ0fSgeQlr7YDE0pQKGegfiZDYVK-_PcCvFx3MV3QyoB0yO4Yx0s9MxA62Hmv0&amp;t=ffffffffd99926d3" type="text/javascript"></script><script src="/ScriptResource.axd?d=lAcNKCSBPRb9dHiP3rTbPwQCStnxeb2NyqYS1uQJrdsa3nBiYDV7th9Hm-cEM4XBju-AXg5x8nCs6dvzeY1zp2Yz8N0C3yl9i6bNbA1Jsmw5oJVwzWdq75oRXhXBGp8e32p987OJj11l0sk0ZQViQPa-SDUEUGZFH7i6Mmx0xhHcIlWhwHAQSumUhsJe2KsYDjB_hQ2&amp;t=ffffffffd99926d3" type="text/javascript"></script><link href="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/class-time-table/styles.f835e6220884a07478af.css" rel="stylesheet" type="text/css" /><link href="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/css/main.f317cc0e.min.css" rel="stylesheet" type="text/css" /> <meta name="google-signin-client_id" content="692447491034-cfe1a85md3lac82optcatdujbptftbp1.apps.googleusercontent.com"> <script type="text/javascript">var sf_appPath='/';</script><script type="text/javascript">
+(function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:749429,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+
+var altro = false;
+
+$(function() {
+  $('#video1').on('play', function (event) {
+    if (altro == true) {
+      $(".loader").remove();
+    }
+    altro = true;
+  });
+  $('#video2').on('play', function (event) {
+    if (altro == true) {
+      $(".loader").remove();
+    }
+    altro = true;
+  });
+
+  
+  setInterval(function(){ 
+    $(".loader").remove();
+  }, 3000);
+})
+</script><style type="text/css" media="all">/* VAI DEAFAULT */
+
+.header-center {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-center nav {
+    flex: 1;
+}
+
+.header-center h1 {
+    flex: 0.5;
+    text-align: center;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-left.navbar-default>ul.navbar-nav {
+    float: right;
+}
+
+.btn-link.btn-link-base.menu-mobile-right {
+    display: none;
+}
+
+#site-header-sticky-wrapper .header-shop.navbar-default>ul.navbar-nav>li>a span {
+    text-indent: -5000px;
+    display: inline-block;
+    height: 23px;
+    width: 19px;
+    background-image: url(https://vai2018i1.azureedge.net/images/default-source/icon-pages/shop_white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0%);
+}
+
+#site-header-sticky-wrapper .header-contact.navbar-default>ul.navbar-nav>li>a span {
+    text-indent: -5000px;
+    display: inline-block;
+    height: 23px;
+    width: 22px;
+    background-image: url(https://www.virginactive.it/images/default-source/icon-pages/call_white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: brightness(0%);
+}
+
+
+#site-header-sticky-wrapper.is-sticky #headerSite .navbar-default>ul.navbar-nav>li>a,
+.header-right .navbar-default>ul.navbar-nav>li>a {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+
+.header-right .search-box-container .btn-link.btn-link-base {
+    padding-right: 0;
+    border-right: 0;
+}
+
+
+
+@media (min-width: 1025px) {
+  #site-header-sticky-wrapper.is-sticky #headerSite h1.container-logo .logo {
+    padding: 0!important;
+  }
+}
+
+@media (max-width: 1240px) {
+    .navbar-default>ul.navbar-nav>li>a, .navbar-default>ul.navbar-nav>li>span {
+        padding-left: 5px!important;
+        padding-right: 5px!important;
+    }
+}
+
+@media (max-width: 1050px) {
+    .navbar-default>ul.navbar-nav>li>a, .navbar-default>ul.navbar-nav>li>span {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-default>ul.navbar-nav>li>a, .navbar-default>ul.navbar-nav>li>span {
+        font-size: 9px;
+        padding-left: 3px!important;
+        padding-right: 3px!important;
+    }
+}
+
+@media (max-width: 767px) {
+    .header-center {
+        justify-content: flex-start;
+    }
+
+    .btn-link.btn-link-base.menu-mobile-right {
+        display: inline-block;
+    }
+
+    .header-left {
+        width: 0px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header-left .btn-link.btn-link-base {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    #site-header-sticky-wrapper #headerSite h1.container-logo-sticky .logo, #site-header-sticky-wrapper #headerSite h1.container-logo .logo {
+      width: auto;
+      padding: 6px 0;
+      height: 50px;
+    }
+  }</style><style type="text/css" media="all">.luglioagosto {
+  font-weight:700;
+  padding-left:15px;
+  color:#FFF;
+  display:inline-block;
+  padding-top:16px;
+}
+.luglioagosto:hover {
+  color: #fff;
+}
+@media (max-width: 1024px) {
+  .luglioagosto {
+    padding-top: 7px;
+  }
+  .luglioagosto span {
+    display: block;
+  }
+  
+  #preHeaderSite .sf_colsIn.col-md-9.col-sm-4.col-xs-3 {
+    width: 70%!important;
+  }
+  #preHeaderSite .sf_colsIn.col-md-3.col-sm-8.col-xs-9 {
+    width: 30%!important;
+  }
+}
+@media (max-width: 768px) {
+  .luglioagosto {
+    padding-top: 10px;
+  }
+}</style><style type="text/css" media="all">/* Homepage header */
+#site-header-sticky-wrapper:not(.is-sticky) #headerSite .bg-white {
+  background: none!important;
+}
+#site-header-sticky-wrapper:not(.is-sticky) #headerSite .border-gray-white7-bottom {
+  border: 0!important;
+}
+#site-header-sticky-wrapper:not(.is-sticky) .navbar-default .navbar-nav>li>a, .navbar-default .navbar-text {
+  color: #fff
+}
+#site-header-sticky-wrapper:not(.is-sticky) .header-center h1 img {
+  filter: brightness(0) invert(1);
+}
+#site-header-sticky-wrapper #headerSite h1.container-logo-sticky .logo, #site-header-sticky-wrapper #headerSite h1.container-logo .logo {
+  padding: 0;
+  height: 70px;
+  width: auto;
+}
+#site-header-sticky-wrapper:not(.is-sticky) .icon-bars.dark-princ {
+  background-image: url(ResourcePackages/VAI/assets/dist/images/icons/ico-menu.svg);
+}
+#site-header-sticky-wrapper:not(.is-sticky) #headerSite .icon-search.dark {
+  background-image: url(ResourcePackages/VAI/assets/dist/images/icons/ico-search.svg);
+}
+#site-header-sticky-wrapper:not(.is-sticky) .header-shop.navbar-default>ul.navbar-nav>li>a span {
+  text-indent: -5000px;
+  display: inline-block;
+  height: 23px;
+  width: 19px;
+  background-image: url(https://vai2018i1.azureedge.net/images/default-source/icon-pages/shop_white.png?sfvrsn=5e2403fe_2);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: brightness(1);
+}
+
+#site-header-sticky-wrapper:not(.is-sticky) .header-contact.navbar-default>ul.navbar-nav>li>a span {
+  text-indent: -5000px;
+  display: inline-block;
+  height: 23px;
+  width: 22px;
+  background-image: url(https://www.virginactive.it/images/default-source/icon-pages/call_white.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: brightness(1);
+}
+
+
+/* Video */
+.video-wrappper {
+  position: relative;
+  height: 100vh;
+  margin-top: -91px
+}
+
+.video-wrappper .loader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+.video-wrappper div.loader::after {
+  content: "";
+  border: 16px solid #636363;
+  border-top: 16px solid #e10a0a;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: loadspin 2s linear infinite;
+  position: absolute;
+  z-index: 10;
+}
+@keyframes loadspin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+.video-wrappper div.hover {
+  position: absolute;
+  width: 100vw;
+  height: 50vh;
+  left: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.video-wrappper div.hover.started::after {
+  display: none;
+}
+
+.video-wrappper div.hover.top-link {
+  top: 0;
+}
+
+.video-wrappper div.hover.bottom-link {
+  top: 50vh;
+}
+
+.video-wrappper div.hover.top-link:hover ~ .homepage-video.video-top {
+  height: 100vh;
+}
+.video-wrappper div.hover.bottom-link:hover ~ .homepage-video.video-top {
+  height: 0;
+}
+
+.homepage-video {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.homepage-video.video-top {
+  height: 50vh;
+  z-index: 20;
+  transition: height .9s cubic-bezier(.165,.84,.44,1);
+}
+.homepage-video.video-bottom {
+  z-index: 10;
+}
+
+.video-embed {
+  position: relative;
+  height: 100%;
+}
+.homepage-video.video-top .video-embed {
+  height: 100vh;
+}
+
+.video-embed__canvas {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-embed {
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-wrappper h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 55px;
+  font-weight: 900;
+  text-align: center;
+  width: 90vw;
+  margin: 0;
+  position: absolute;
+  top: 50vh;
+  left: 50vw;
+  z-index: 30;
+  transform: translate(-50%, -50%);
+}
+
+.video-wrappper h1.rainbow-text {
+  
+  background: linear-gradient(
+		to right,
+		#e40303,
+		#e40303 16.67%,
+		#ff8c00 16.67%,
+		#ff8c00 33.33%,
+		#ffed00 33.33%,
+		#ffed00 50%,
+		#008026 50%,
+		#008026 66.67%,
+		#004dff 66.67%,
+		#004dff 83.33%,
+		#750787 83.33%,
+		#750787
+		);
+    -webkit-background-clip: text;
+    color: transparent;
+    white-space: nowrap;
+    width: auto;
+}
+
+.video-wrappper h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-weight: 900;
+  text-align: center;
+  width: 90vw;
+  margin: 0;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /*.video-wrappper h1 {
+      font-size: 50px;
+  }*/
+  .video-wrappper h1 {
+    font-size: 35px;
+  }
+  #site-header-sticky-wrapper #headerSite h1.container-logo-sticky .logo, #site-header-sticky-wrapper #headerSite h1.container-logo .logo {
+    padding: 6px 0;
+    height: 50px;
+    width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  /*.video-wrappper h1 {
+      display: none;
+  }
+  .video-wrappper h2 {
+      display: block;
+  }*/
+
+  .homepage-video.video-top .video-embed {
+      height: 50vh;
+  }
+
+  .homepage-video {
+      height: 50vh;
+  }
+  .homepage-video.video-bottom {
+      z-index: 10;
+      top: 50vh;
+  }
+  /* .video-embed {
+      background: url(https://vai2018i1.azureedge.net/images/default-source/default-album/logo-174px.png?sfvrsn=e6756acd_2) center 25% no-repeat;
+  } */
+}
+
+
+/* 2 block */
+.new-home-section {
+  text-align: center;
+}
+
+.new-home-section .row {
+  display: flex;
+}
+
+.new-home-section section {
+  padding: 50px 30px 10px 30px;
+  height: 100%;
+}
+
+.new-home-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.new-home-section h2 + p {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.new-home-section p {
+  font-size: 18px;
+}
+
+.club-section {
+  background: #f1f1f1;
+}
+
+.home-section {
+  color: #fff;
+  background: #e10d0d;
+}
+
+.new-home-section section .btn-row {
+  margin-top: 20px;
+  margin-bottom: 90px;
+}
+
+.new-home-section section .btn-row .btn {
+  margin: 10px;
+}
+
+/* .new-home-section section .btn-row .btn-white,
+.new-home-section section .btn-row .btn-white:active,
+.new-home-section section .btn-row .btn-white:focus,
+.new-home-section section .btn-row .btn-white:hover {
+  color: #000;
+} */
+
+.new-home-section .numeri {
+  margin-top: 30px;
+}
+
+.new-home-section .numeri p {
+  font-size: 15px;
+}
+
+.new-home-section .numeri span {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.new-home-section .home-section .numeri span {
+color: #fff;
+}
+
+.new-home-section .numeri span h3 {
+  font-size: 60px;
+  /* font-weight: normal; */
+  margin: 0;
+}
+
+.new-home-section .numeri span p {
+  font-size: 15px;
+}
+
+.new-home-section .numeri + p {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 5px;
+}
+
+
+
+@media (max-width: 1024px) {
+  .new-home-section .row {
+      display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .new-home-section section .btn-row {
+      margin-bottom: 60px;
+  }
+  .video-wrappper div.hover.bottom-link:hover ~ .homepage-video.video-top {
+      height: 50vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .video-wrappper {
+      margin-top: -100px;
+  }
+}
+
+@media (max-width: 480px) {
+  /*.new-home-section h2 {
+      font-size: 24px;
+      width: 70vw;
+      margin-left: auto;
+      margin-right: auto;
+  }*/
+  .new-home-section p {
+      font-size: 14px;
+  }
+  .new-home-section section .btn-row .btn {
+      margin: 10px;
+      display: block;
+  }
+}</style><meta name="Generator" content="Sitefinity 10.2.6602.0 PU" /><link rel="canonical" href="https://www.virginactive.it" /><meta name="description" content="Virgin Active Collection Club e Villaggi Fitness: una nuova concezione di benessere che coinvolge famiglia e amici. Virgin Active offre palestra, corsi fitness, piscina, area relax, centro benessere, personal trainer, area bimbi." /></head> <body class="bg-white"> <script>
+        //checklogin script
+        function show(className) {
+            var elements = document.getElementsByClassName(className)
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = 'inline';
+            }
+        }
+        function hide(className) {
+            var elements = document.getElementsByClassName(className)
+
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.display = 'none';
+            }
+        }
+
+        if (!String.prototype.startsWith) {
+            String.prototype.startsWith = function (searchString, position) {
+                position = position || 0;
+                return this.indexOf(searchString, position) === position;
+            };
+        }
+
+        if (!document.body.classList.contains("sfPageEditor")) {
+            var request = new XMLHttpRequest();
+            request.open('GET', '/Virgin/MyVirgin/IsUserLogged', true);
+            request.onload = function () {
+                if (request.status >= 200 && request.status < 400) {
+                    // Success!
+                    var resp = request.responseText;
+                    var UserStatus = JSON.parse(resp);
+
+                    if (UserStatus) {
+                        if (UserStatus.IsUserLoggedResult.startsWith("LOGGED-SUBSCRIBER")) {
+                            hide("vai-unsigned-content");
+                            show("vai-signed-content");
+                            show("vai-subscriber-content");
+
+                            if (document.getElementById("loggedInImage") != null) {
+                                document.getElementById("loggedInImage").setAttribute("src", UserStatus.IsUserLoggedResult.replace("LOGGED-SUBSCRIBER", ""));
+                            }
+                        } else if (UserStatus.IsUserLoggedResult.startsWith("LOGGED")) {
+                            //Logged user hide all no logged content and show logged content
+                            hide("vai-unsigned-content");
+                            show("vai-signed-content");
+                            show("vai-unsubscriber-content");
+                            if (document.getElementById("loggedInImage") != null) {
+                                document.getElementById("loggedInImage").setAttribute("src", UserStatus.IsUserLoggedResult.replace("LOGGED", ""));
+                            }
+                        } else if (UserStatus.IsUserLoggedResult == "TOLOGOUT") {
+                            //Redirect to logout
+                            if (document.getElementById("logoutHrefButton") != null) {
+                                location.href = document.getElementById("logoutHrefButton").getAttribute("sf-logout-url");
+                            }
+                        } else {
+                            //notLogged user hide all logged content and show no logged content
+                            hide("vai-signed-content");
+                            show("vai-unsigned-content");
+                            show("vai-unsubscriber-content");
+                        }
+
+                    }
+                }
+            };
+            request.send();
+        }
+
+    </script>  <header id="site-header" class=""> <div class="container-fluid container-no-padding relative-container"> <div id="preHeaderSite"> 
+<div class="container-fluid bg-brand no-padding-xs" data-sf-element="Container">
+    <div class="row" data-sf-element="Row">
+        <div id="RowPreHeaderPlaceholder_TDCF72B26028_Col00" class="sf_colsIn col-md-9 col-sm-4 col-xs-3 no-padding" data-placeholder-label="Mettiti in contatto" data-sf-element="GetInTouchPlaceholder">
+
+<div >
+    <div ></div>    
+
+</div>
+
+
+
+
+<div class="vai-subscriber-content">
+</div>
+
+
+
+
+</div>
+        <div id="RowPreHeaderPlaceholder_TDCF72B26028_Col01" class="sf_colsIn col-md-3 col-sm-8 col-xs-9 no-padding" data-placeholder-label="login" data-sf-element="LoginPlaceholder">
+
+
+<div class="text-white pull-right login-container">
+    <div data-sf-role="sf-logged-in-view" class="vai-signed-content" >
+
+        <a  href="https://www.virginactive.it/myvirgin" data-sf-role="sf-logged-in-name" class="display-inline-block relative-container margin-right-sm">
+            <span id="loggedInUserName" class="hidden"></span>
+            <img  id="loggedInImage" alt="img profile" title="" class="img-circle-profile-xsmall img-circle">
+        </a>
+
+
+        
+        
+    </div>
+
+    <div data-sf-role="sf-logged-out-view" class="vai-unsigned-content">
+        <a class="btn btn-link btn-link-white btn-link-login text-uppercase no-padding text-vertical-align-middle sf-mr-m text-sm" href="https://www.virginactive.it/login"><span class="display-inline-block text-vertical-align-middle line-height-xs">Login</span><span class="margin-left-sm icon-login"></span></a>
+        
+    </div>
+</div>
+
+<input type="hidden" data-sf-role="sf-status-json-endpoint-url" value="/rest-api/login-status"/>
+
+<input type="hidden" data-sf-role="sf-is-design-mode-value" value="False" />
+<input type="hidden" data-sf-role="sf-allow-windows-sts-login" value="False" />
+
+</div>
+    </div>
+</div>
+
+
+
+ </div> <div id="headerSite"> 
+<div class="container-fluid no-padding-xs bg-white border-gray-white7-bottom" data-sf-element="Container">
+    <div class="row" data-sf-element="Row">
+        <div id="RowNavigationPrimaryPlaceholder_T56336ACB026_Col00" class="sf_colsIn col-xs-2 header-left" data-placeholder-label="Left Navigation" data-sf-element="LeftNavigationPlaceholder">
+
+
+
+
+
+
+<a id="buttonOpenFullMenu" class="pull-left btn btn-link btn-link-base">
+    <span class="icon-bars dark-princ"></span>
+</a>
+
+<div id="NavFull" class="overlay-menu">
+
+    
+        <nav class="nav nav-fullwidth height100" role="navigation">
+            <div class="row height100">
+                <div class="col-xs-12 padding-vertical-big padding-xs-top-md padding-xs-bottom-sm bg-white height100 position-relative">
+                    <a id="buttonCloseFullMenu"><span class="icon-close primary"></span></a>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/club" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Club</span></h4>
+                    <p class="fullwidth-description text-medium">Scegli tra 40 club pensati per fare stare bene tutta la famiglia: scopri dove siamo, i servizi e le strutture dei nostri club. </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/corsi" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Corsi</span></h4>
+                    <p class="fullwidth-description text-medium">Scopri tutti i corsi Virgin Active. Scegli il corso più adatto alle tue esigenze e iscriviti online. Scopri le 4 aree dell'allenamento: Equilibrio, Forza, Resistenza e Stabilità.</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/academy" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Academy</span></h4>
+                    <p class="fullwidth-description text-medium">Virgin Active Academy è una scuola che prepara i professionisti del fitness ai livelli d'eccellenza.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/abbonamenti" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Abbonamenti</span></h4>
+                    <p class="fullwidth-description text-medium">Scegli la formula più adatta a te tra Life, Premium, Premium Plus e Collection.</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/junior" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Junior</span></h4>
+                    <p class="fullwidth-description text-medium">In Virgin Active abbiamo pensato anche ai più piccoli. Scopri la nostra scuola nuoto, i corsi di acquaticità neonatale, dai 18 mesi ai 14 anni. </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/concierge" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Concierge</span></h4>
+                    <p class="fullwidth-description text-medium">Un’area di vantaggi dedicati ai possessori dell’abbonamento Collection Open 12 mesi</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/corporate" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Corporate</span></h4>
+                    <p class="fullwidth-description text-medium">Virgin Active è leader internazionale nel settore dei centri fitness e benessere con oltre 1 milione di iscritti e più di 250 club in tutto il mondo.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/trainer" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Trainer</span></h4>
+                    <p class="fullwidth-description text-medium">1500 trainer a completa disposizione per il tuo benessere personale.</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/vieni-a-trovarci" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Contattami</span></h4>
+                    <p class="fullwidth-description text-medium">Prenota un appuntamento presso il club per ricevere un trattamento su misura e trovare l'abbonamento più adatto a te.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="https://shop.virginactive.it/account/login" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Acquista</span></h4>
+                    <p class="fullwidth-description text-medium">Scopri tutti gli abbonamenti Virgin Active, adatti a qualsiasi tua esigenza.</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/revolution" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Revolution</span></h4>
+                    <p class="fullwidth-description text-medium">Direttamente da casa ma immerso nella community dello Studio Revolution per vivere un'esperienza digitale.</p>
+                </a>
+            </div>
+        </div>
+                </div>
+                </div>
+
+            </div>
+        </nav>
+    
+</div>
+
+    
+
+    
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(document).on('click', '#buttonOpenFullMenu', function(){
+            $("#NavFull").css({ overflow: 'hidden' });
+            $("#NavFull").css({ width: '100%' });
+            $("#NavFull").css({ height: '100%' });
+            $("#site-content").hide();
+            $("#site-footer").hide();
+            $("#NavFull").css({ overflow: 'auto' });
+            $("#NavFull").css("overflow-x", "hidden");
+        });
+
+        $(document).on('click', '#buttonCloseFullMenu', function () {
+            $("#NavFull").css({ overflow: 'hidden' });
+            $("#NavFull").css({ width: '0%' });
+            $("#NavFull").css({ height: '0' });
+            $("#site-content").show();
+            $("#site-footer").show();
+        });
+    });
+</script>
+</div>
+        <div id="RowNavigationPrimaryPlaceholder_T56336ACB026_Col01" class="sf_colsIn col-xs-8 header-center" data-placeholder-label="Logo" data-sf-element="LogoPlaceholder">
+
+
+
+
+
+    <nav class="navbar navbar-default hidden-xs nav-left" role="navigation">
+        <ul class="nav navbar-nav">
+        <li class=""><a href="/club" class="text-uppercase" target="_self"><span>Club</span></a></li>
+        <li class=""><a href="/corsi" class="text-uppercase" target="_self"><span>Corsi</span></a></li>
+        <li class=""><a href="/trainer" class="text-uppercase" target="_self"><span>Trainer</span></a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+ 
+    <h1 class="container-logo-sticky">
+        <a href="https://www.virginactive.it/homepage" title="virgin-active_logo">
+                <img class="logo" src="https://vai2018i1.azureedge.net/images/default-source/default-album/virgin-active_logo_col.png?sfvrsn=b72116f9_2" title="" alt="virgin-active_logo" 
+                
+                 /> 
+
+        </a>
+    </h1>
+  
+    <h1 class="container-logo" itemscope itemtype="http://schema.org/Organization">
+        <a href="https://www.virginactive.it/homepage" title="virgin-active_logo" itemprop="url">
+                <img class="logo" src="https://vai2018i1.azureedge.net/images/default-source/default-album/virgin-active_logo_col.png?sfvrsn=b72116f9_2" title="" alt="virgin-active_logo" 
+                
+                 /> 
+
+        </a>
+    </h1>
+
+
+
+
+
+
+    <nav class="navbar navbar-default hidden-xs" role="navigation">
+        <ul class="nav navbar-nav">
+        <li class=""><a href="/revolution" class="text-uppercase" target="_self"><span>Revolution</span></a></li>
+        <li class=""><a href="/vieni-a-trovarci" class="text-uppercase" target="_self"><span>Contattami</span></a></li>
+        <li class=""><a href="https://shop.virginactive.it/account/login" class="text-uppercase" target="_self"><span>Acquista</span></a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+</div>
+        <div id="RowNavigationPrimaryPlaceholder_T56336ACB026_Col02" class="sf_colsIn col-sm-2 col-xs-4 header-right" data-placeholder-label="Right Navigation" data-sf-element="RightNavigationPlaceholder">
+
+
+
+
+
+
+<a id="buttonOpenFullMenu" class="pull-left btn btn-link btn-link-base menu-mobile-right">
+    <span class="icon-bars dark-princ"></span>
+</a>
+
+<div id="NavFull" class="overlay-menu">
+
+    
+        <nav class="nav nav-fullwidth height100" role="navigation">
+            <div class="row height100">
+                <div class="col-xs-12 padding-vertical-big padding-xs-top-md padding-xs-bottom-sm bg-white height100 position-relative">
+                    <a id="buttonCloseFullMenu"><span class="icon-close primary"></span></a>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/club" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Club</span></h4>
+                    <p class="fullwidth-description text-medium">Scegli tra 40 club pensati per fare stare bene tutta la famiglia: scopri dove siamo, i servizi e le strutture dei nostri club. </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/corsi" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Corsi</span></h4>
+                    <p class="fullwidth-description text-medium">Scopri tutti i corsi Virgin Active. Scegli il corso più adatto alle tue esigenze e iscriviti online. Scopri le 4 aree dell'allenamento: Equilibrio, Forza, Resistenza e Stabilità.</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/academy" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Academy</span></h4>
+                    <p class="fullwidth-description text-medium">Virgin Active Academy è una scuola che prepara i professionisti del fitness ai livelli d'eccellenza.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/abbonamenti" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Abbonamenti</span></h4>
+                    <p class="fullwidth-description text-medium">Scegli la formula più adatta a te tra Life, Premium, Premium Plus e Collection.</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/junior" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Junior</span></h4>
+                    <p class="fullwidth-description text-medium">In Virgin Active abbiamo pensato anche ai più piccoli. Scopri la nostra scuola nuoto, i corsi di acquaticità neonatale, dai 18 mesi ai 14 anni. </p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/concierge" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Concierge</span></h4>
+                    <p class="fullwidth-description text-medium">Un’area di vantaggi dedicati ai possessori dell’abbonamento Collection Open 12 mesi</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/corporate" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Corporate</span></h4>
+                    <p class="fullwidth-description text-medium">Virgin Active è leader internazionale nel settore dei centri fitness e benessere con oltre 1 milione di iscritti e più di 250 club in tutto il mondo.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/trainer" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Trainer</span></h4>
+                    <p class="fullwidth-description text-medium">1500 trainer a completa disposizione per il tuo benessere personale.</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/vieni-a-trovarci" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Contattami</span></h4>
+                    <p class="fullwidth-description text-medium">Prenota un appuntamento presso il club per ricevere un trattamento su misura e trovare l'abbonamento più adatto a te.</p>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="https://shop.virginactive.it/account/login" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Acquista</span></h4>
+                    <p class="fullwidth-description text-medium">Scopri tutti gli abbonamenti Virgin Active, adatti a qualsiasi tua esigenza.</p>
+                </a>
+            </div>
+        </div>
+                <div class="col-md-2 col-sm-2 hidden-xs"></div>
+                </div>
+                <div class="row">
+        <div class="col-md-1 col-sm-2 hidden-xs"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12 padding-bottom-md">
+            <div class="padding-bottom-md position-relative text-center-xs">
+                <a href="/revolution" class="navbar-link-fullmenu navbar-link-fullmenu-primary " target="_self">
+                    <h4 class="fullwidth-title text-primary no-margin-top text-weight-400 text-center-xs text-left"><span class="display-inline-block padding-bottom-xs border-brand-bottom">Revolution</span></h4>
+                    <p class="fullwidth-description text-medium">Direttamente da casa ma immerso nella community dello Studio Revolution per vivere un'esperienza digitale.</p>
+                </a>
+            </div>
+        </div>
+                </div>
+                </div>
+
+            </div>
+        </nav>
+    
+</div>
+
+    
+
+    
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(document).on('click', '#buttonOpenFullMenu', function(){
+            $("#NavFull").css({ overflow: 'hidden' });
+            $("#NavFull").css({ width: '100%' });
+            $("#NavFull").css({ height: '100%' });
+            $("#site-content").hide();
+            $("#site-footer").hide();
+            $("#NavFull").css({ overflow: 'auto' });
+            $("#NavFull").css("overflow-x", "hidden");
+        });
+
+        $(document).on('click', '#buttonCloseFullMenu', function () {
+            $("#NavFull").css({ overflow: 'hidden' });
+            $("#NavFull").css({ width: '0%' });
+            $("#NavFull").css({ height: '0' });
+            $("#site-content").show();
+            $("#site-footer").show();
+        });
+    });
+</script>
+
+
+
+
+
+<div class="search-box-container pull-left">
+
+    <div id="searchBox" class="overlay-menu">
+        <div class="container-fluid bg-primary position-relative">
+            <div class="container container-padded">
+                <div class="row padding-top-big">
+                    <div class="col-md-2 col-sm-3 col-xs-12 text-center-xs padding-xs-bottom-md">
+                        <img src="/ResourcePackages/VAI/assets/dist/images/logo_va_search.png" alt="logo VAI search" />
+                    </div>
+                    <div class="col-md-6 col-sm-7 col-xs-10">
+                        <div class="form-group branded br-border-bottom white">
+                            <input type="search" title="Cerca" placeholder="Cerca" id="12b8b0b3-aca0-4c59-961f-522f0402bbd4" class="form-control" value="" />
+                            <button type="button" class="hidden" id="8ea98704-c296-4716-ad9c-5daac396cb83"><span class="icon-search"></span></button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-2 col-xs-2 text-right">
+                        <a id="CloseSearch" class="btn btn-link-white no-padding no-border margin-sm-top-sm margin-xs-top-sm" href="#"><span class="icon-close-search"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div  class="container container-padded">
+            <div  class="row padding-top-big">
+                <div id="searchResult"  class="col-md-offset-2 col-sm-offset-2 col-md-8 col-sm-8 col-xs-offset-1 col-xs-10">
+                    <div id="loadingDiv" class="vertical-align-center hidden width100 height100"><img src="/ResourcePackages/VAI/assets/dist/images/loading.gif" alt="loading" class="center-block" /></div> 
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <button type="button" id="openSearch" class="btn btn-link btn-link-base"><span class="icon-search dark"></span></button>
+    <script>
+        var req;
+            $(document).ready(function () {
+                $('#openSearch').click(function () {
+                    $("#searchBox").css({ overflow: 'hidden' });
+                    $("#searchBox").css({ width: '100%' });
+                    $("#searchBox").css({ height: '100%' });
+                    $("#site-content").hide();
+                    $("#site-footer").hide();
+                    $("#searchBox").css({ overflow: 'auto' });
+                });
+
+                $('#CloseSearch').click(function () {
+                    $("#searchBox").css({ overflow: 'hidden' });
+                    $("#searchBox").css({ width: '0%' });
+                    $("#searchBox").css({ height: '0' });
+                    $("#site-content").show();
+                    $("#site-footer").show();
+                    //$("#searchBox input[type=search]").val("");
+                });
+
+                var loadingDiv = $("#loadingDiv").clone();
+                loadingDiv.removeClass("hidden");
+                    var searchBoxIdFields = $('[data-sf-role="searchTextBoxId"]');
+
+                    for (var i = 0; i < searchBoxIdFields.length; i++) {
+                        var searchBoxIdField = $(searchBoxIdFields[i]);
+                        var controlServerData = {
+                            resultsUrl: searchBoxIdField.siblings('[data-sf-role="resultsUrl"]').first().val(),
+                            indexCatalogue: searchBoxIdField.siblings('[data-sf-role="indexCatalogue"]').first().val(),
+                            wordsMode: searchBoxIdField.siblings('[data-sf-role="wordsMode"]').first().val(),
+                            disableSuggestions: $.parseJSON(searchBoxIdField.siblings('[data-sf-role="disableSuggestions"]').first().val()),
+                            minSuggestionLength: searchBoxIdField.siblings('[data-sf-role="minSuggestionLength"]').first().val(),
+                            suggestionFields: searchBoxIdField.siblings('[data-sf-role="suggestionFields"]').first().val(),
+                            language: searchBoxIdField.siblings('[data-sf-role="language"]').first().val(),
+                            suggestionsRoute: searchBoxIdField.siblings('[data-sf-role="suggestionsRoute"]').first().val(),
+                            searchTextBoxSelector: searchBoxIdField.val(),
+                            searchButtonSelector: searchBoxIdField.siblings('[data-sf-role="searchButtonId"]').first().val()
+                        };
+                        featherSearchBoxWidget(controlServerData);
+                    }
+
+                    function featherSearchBoxWidget(serverData) {
+                        var searchTextBox = $(serverData.searchTextBoxSelector),
+                                searchButton = $(serverData.searchButtonSelector);
+
+                      
+                        searchTextBox.keypress(keypressHandler);
+                        searchTextBox.keyup(keyupHandler);
+
+                       /* Event handlers */
+                        function keypressHandler(e) {
+                            if (!e)
+                                e = window.event;
+
+                            var keyCode = null;
+                            if (e.keyCode) {
+                                keyCode = e.keyCode;
+                            }
+                            else {
+                                keyCode = e.charCode;
+                            }
+
+                            if (keyCode == 13) {
+                                navigateToResults(e);
+                            }
+                        }
+
+                        function suggestionsSuccessHandler(result, args) {
+                            var r=$(result).find("#resultBox");
+                            $("#searchResult").html(r);
+                        }
+
+                        function keyupHandler(e) {
+                            if (e.keyCode != 38 &&  // up arrow
+                                e.keyCode != 40 && // down arrow
+                                e.keyCode != 27) { // esc
+                                // When the auto complete menu is shown, only this event is detected
+                                if (e.keyCode == 13) {
+                                    // when enter is pressed
+                                    navigateToResults(e);
+                                }
+
+                                var request = {};
+                                var searchText = searchTextBox.val().trim();
+                                if (searchText.length >= serverData.minSuggestionLength) {
+                                    navigateToResults(e);
+                                    
+                                } else {
+                                    $("#searchResult").html("");
+                                    if (typeof (req) !== "undefined") {
+                                        clearTimeout(req);
+                                        req = undefined;
+                                    }
+                                }
+                            }
+                        }
+
+                        /* Helper methods */
+                        function navigateToResults(e) {
+                            if (!e)
+                                e = window.event;
+
+                            if (e.stopPropagation) {
+                                e.stopPropagation();
+                            }
+                            else {
+                                e.cancelBubble = true;
+                            }
+                            if (e.preventDefault) {
+                                e.preventDefault();
+                            }
+                            else {
+                                e.returnValue = false;
+                            }
+
+                            var query = searchTextBox.val();
+
+                            if (query && query.trim() && serverData.indexCatalogue) {
+                                
+                                var location = getLocation();
+                               
+                                if (typeof (req) !== "undefined") {
+                                    clearTimeout(req);
+                                    req = undefined;
+                                }
+                                $("#searchResult").html(loadingDiv.clone());
+                                req = setTimeout(function () {
+                                    sendSentence();
+                                     $.ajax({
+                                        type: "GET",
+                                        url: location,
+                                        success: suggestionsSuccessHandler
+                                    });
+                                }, 400);
+                            }
+                        }
+
+                        function getLocation() {
+                            var query = searchTextBox.val().trim();
+
+                            var separator = (serverData.resultsUrl.indexOf("?") == -1) ? "?" : "&";
+
+                            var catalogueParam = separator + "indexCatalogue=" + encodeURIComponent(serverData.indexCatalogue),
+                                searchQueryParam = "&searchQuery=" + encodeURIComponent(query),
+                                wordsModeParam = "&wordsMode=" + serverData.wordsMode;
+
+                            var url = serverData.resultsUrl + catalogueParam + searchQueryParam + wordsModeParam;
+
+                            return url;
+                        }
+
+                        function sendSentence() {
+                            if (window.DataIntelligenceSubmitScript) {
+                                DataIntelligenceSubmitScript._client.sentenceClient.writeSentence({
+                                    predicate: "Search for",
+                                    object: searchTextBox.val(),
+                                    objectMetadata: [{
+                                        'K': 'PageUrl',
+                                        'V': location.href
+                                    }]
+                                });
+                            }
+                        }
+                    }
+                });
+               
+
+
+           
+
+
+
+    </script>
+    <input type="hidden" data-sf-role="resultsUrl" value="/ricerca-risultati" />
+    <input type="hidden" data-sf-role="indexCatalogue" value="generic-new" />
+    <input type="hidden" data-sf-role="wordsMode" value="AllWords" />
+    <input type="hidden" data-sf-role="disableSuggestions" value='false' />
+    <input type="hidden" data-sf-role="minSuggestionLength" value="3" />
+    <input type="hidden" data-sf-role="suggestionFields" value="Title,Content,Name,Surname" />
+    <input type="hidden" data-sf-role="language" value="" />
+    <!--input type="hidden" data-sf-role="suggestionsRoute" value="/restapi/search/suggestions" /-->
+    <input type="hidden" data-sf-role="searchTextBoxId" value='#12b8b0b3-aca0-4c59-961f-522f0402bbd4' />
+    <input type="hidden" data-sf-role="searchButtonId" value='#8ea98704-c296-4716-ad9c-5daac396cb83' />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-default header-contact" role="navigation">
+        <ul class="nav navbar-nav">
+        <li class=""><a href="/vieni-a-trovarci" class="text-uppercase" target="_self"><span>Contattami</span></a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <nav class="navbar navbar-default header-shop" role="navigation">
+        <ul class="nav navbar-nav">
+        <li class=""><a href="https://shop.virginactive.it/account/login" class="text-uppercase" target="_self"><span>Acquista</span></a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+</div>
+    </div>
+</div> </div> </div> </header> <div id="site-content"> 
+
+
+<div >
+    <div ><div class="video-wrappper"><div class="loader"></div><div class="hover top-link"><h2>Nei club</h2></div><div class="hover bottom-link"><h2>A casa tua</h2></div><section class="homepage-video video-top"><div class="video-embed"><div class="video-embed__canvas"><div class="video-embed"><video autoplay="" id="video1" loop="" muted="" playsinline="" preload="auto"><source src="https://player.vimeo.com/progressive_redirect/playback/744175085/rendition/1080p/file.mp4?loc=external&amp;signature=f477f280106d9677997b6617d7da647ea404cce97354455b04f4e5e997b1673e"></source>Your browser does not support the video tag.
+          </video>
+ </div></div></div></section><section class="homepage-video video-bottom"><div class="video-embed"><div class="video-embed__canvas"><div class="video-embed"><video autoplay="" id="video2" loop="" muted="" playsinline="" preload="auto"><source src="https://player.vimeo.com/progressive_redirect/playback/744175578/rendition/1080p/file.mp4?loc=external&amp;signature=acd7750fce3e3c4d6c7208cb61307784b0595df7e1fc81b0a29507c2347b80cb" type="video/mp4"></source>Your browser does not support the video tag.
+          </video>
+ </div></div></div></section><h1>Promo shock: 20% di sconto<br />per 12 mesi. Clicca 
+    <a href="https://shop.virginactive.it/landing/promo-fitness-gennaio/" style="color:#e10a0a;">qui</a>
+ entro il 31/01.</h1></div></div>    
+
+</div>
+
+<div >
+    <div ><div class="container-fluid new-home-section no-padding"><div class="row"><div class="col-md-6 no-padding"><section class="club-section"><h2>I nostri club sono aperti.</h2><p>Un&rsquo;esperienza di allenamento unica e innovativa in ambienti sani e sicuri. Formule di abbonamento flessibili, adatte alle esigenze di tutti, e vantaggi sempre diversi. </p><div class="btn-row"><a class="text-uppercase btn btn-primary-light btn-lg" href="/club">Scopri i club</a>
+ <a class="text-uppercase btn btn-primary btn-lg" href="https://shop.virginactive.it/purchase">Abbonati ora*</a>
+ </div><h2>Perch&egrave; scegliere i nostri club?</h2><div class="row numeri"><div class="col-sm-4"><span><h3>40</h3>club
+ </span>
+ <p>per essere Active in tutta Italia</p></div><div class="col-sm-4"><span><h3>4.500</h3>corsi
+ </span>
+ <p>classi di gruppo erogate ogni settimana</p></div><div class="col-sm-4"><span><h3>1.500</h3>trainer
+ </span>
+ <p>a disposizione per i tuoi obiettivi di benessere e forma fisica</p></div></div><p>*L&rsquo;abbonamento Club include Outdoor + contenuti digitali Revolution</p></section></div><div class="col-md-6 no-padding"><section class="home-section"><h2>Allenati a casa tua.</h2><p>Revolution &egrave; l'esperienza di allenamento digitale di Virgin Active. A casa tua come al club. <br />Fruibile sulla nuova piattaforma multi-device.</p><div class="btn-row"><a class="text-uppercase btn btn-lg btn-white-light text-uppercase" href="/revolution">Scopri revolution</a>
+ <a class="text-uppercase btn btn-lg btn-white text-uppercase" href="https://shop.virginactive.it/revolution/abbonamentodigitale/">Abbonati ora*</a>
+ </div><h2>Perch&egrave; scegliere Revolution?</h2><div class="row numeri"><div class="col-sm-4"><span><h3>2.500</h3>classi
+ </span>
+ <p>80 nuovi workout a settimana e 50 appuntamenti in diretta</p></div><div class="col-sm-4"><span><h3>10</h3>categorie
+ </span>
+ <p>di allenamento digitale live e on demand e le novit&agrave; series e podcast
+</p></div><div class="col-sm-4"><span><h3>24</h3>live trainer
+                        </span>
+ <p>professionisti del fitness e dell'intrattenimento</p></div></div><p>*L&rsquo;abbonamento digitale include 1 ingresso club al mese</p></section></div></div></div></div>    
+
+</div><div id="SiteContentPlaceholder_C061_Col00" class="sf_colsIn container container-padded bg-white padding-vertical-big padding-xs-vertical-sm padding-sm-vertical-md" data-sf-element="Container" data-placeholder-label="Container">
+<div class="relative-container text-center">
+    
+    <div class="thumbnail thumbnail-fixed-height-countdown thumbnail-white thumbnail-toolbar no-border border-gray with-shadow no-padding margin-top-big margin-bottom-big no-padding-xs">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 col-image-countdown">
+                     <a href="https://shop.virginactive.it/contact" target="_self" class="thumbnail-link hidden-xs">
+                                    <img class="img-fullheight-top hidden-xs" src="https://vai2018i1.azureedge.net/images/default-source/home-page/banner_aperture.jpg?sfvrsn=9ae7e91d_0" alt="banner_APERTURE" title="">
+
+                    </a>
+
+                    <img class="img-fullheight-top visible-xs" src="https://vai2018i1.azureedge.net/images/default-source/home-page/banner_aperture.jpg?sfvrsn=9ae7e91d_0" alt="banner_APERTURE" title="">
+            </div>
+            <div class="col-md-6 col-sm-5 col-xs-12 text-left no-padding">
+                     <a href="https://shop.virginactive.it/contact" target="_self" class="thumbnail-link">
+                <div class="no-margin-xs no-margin-sm padding-top-md padding-sm-top-sm padding-xs-left-sm">
+                        <div class="no-margin text-primary text-bold"><p style="color:#51465A;font-size:22px;">NUOVE APERTURE ROMA E MILANO<strong style="color:#222222;font-family:Arial, Helvetica, sans-serif;font-size:small;"></strong></p></div>
+                                            <h4><p style="color:#3c3c3c;font-size:16px;">A Roma il nuovo club Piazza Indipendenza è aperto per il tuo allenamento dal 31 ottobre. A Milano il nuovo club Piazzale Lodi è aperto per il tuo allenamento dal 28 novembre.
+
+</p></h4>
+                    <div class="line-height-sm no-margin"> </div>
+
+                </div>
+                    </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12 text-right text-center-xs">
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="relative-container text-center">
+    
+    <div class="thumbnail thumbnail-fixed-height-countdown thumbnail-white thumbnail-toolbar no-border border-gray with-shadow no-padding margin-top-big margin-bottom-big no-padding-xs">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 col-image-countdown">
+                     <a href="https://shop.virginactive.it/contact" target="_self" class="thumbnail-link hidden-xs">
+                                    <img class="img-fullheight-top hidden-xs" src="https://vai2018i1.azureedge.net/images/default-source/home-page/rev_banner.jpg?sfvrsn=ad277f66_0" alt="rev_banner" title="">
+
+                    </a>
+
+                    <img class="img-fullheight-top visible-xs" src="https://vai2018i1.azureedge.net/images/default-source/home-page/rev_banner.jpg?sfvrsn=ad277f66_0" alt="rev_banner" title="">
+            </div>
+            <div class="col-md-6 col-sm-5 col-xs-12 text-left no-padding">
+                     <a href="https://shop.virginactive.it/contact" target="_self" class="thumbnail-link">
+                <div class="no-margin-xs no-margin-sm padding-top-md padding-sm-top-sm padding-xs-left-sm">
+                        <div class="no-margin text-primary text-bold"><p style="color:#51465A;font-size:22px;">PROMO NUOVI SOCI<strong style="color:#222222;font-family:Arial, Helvetica, sans-serif;font-size:small;"></strong></p></div>
+                                            <h4><p style="color:#3c3c3c;font-size:16px;">Scegli l’abbonamento annuale nel tuo club preferito, una speciale offerta ti aspetta per allenarti ovunque tu voglia: al club, outdoor e a casa. Scopri di più.</p></h4>
+                    <div class="line-height-sm no-margin"> </div>
+
+                </div>
+                    </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12 text-right text-center-xs">
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="relative-container text-center">
+    
+    <div class="thumbnail thumbnail-fixed-height-countdown thumbnail-white thumbnail-toolbar no-border border-gray with-shadow no-padding margin-top-big margin-bottom-big no-padding-xs">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 col-image-countdown">
+                     <a href="https://www.virginactive.it/abbonamentodigitalesoci" target="_self" class="thumbnail-link hidden-xs">
+                                    <img class="img-fullheight-top hidden-xs" src="https://vai2018i1.azureedge.net/images/default-source/home-page/banner_myva_nov21.jpg?sfvrsn=db616209_0" alt="banner_myva_nov21" title="">
+
+                    </a>
+
+                    <img class="img-fullheight-top visible-xs" src="https://vai2018i1.azureedge.net/images/default-source/home-page/banner_myva_nov21.jpg?sfvrsn=db616209_0" alt="banner_myva_nov21" title="">
+            </div>
+            <div class="col-md-6 col-sm-5 col-xs-12 text-left no-padding">
+                     <a href="https://www.virginactive.it/abbonamentodigitalesoci" target="_self" class="thumbnail-link">
+                <div class="no-margin-xs no-margin-sm padding-top-md padding-sm-top-sm padding-xs-left-sm">
+                        <div class="no-margin text-primary text-bold"><p style="color:#51465A;font-size:22px;">REVOLUTION: NUOVA PIATTAFORMA MULTI-DEVICE
+</p></div>
+                                            <h4><p style="color:#3c3c3c;font-size:16px;">Vivi l'esperienza Revolution sulla nuova piattaforma dedicata all'allenamento digitale: 10 categorie allenamento, 2500 classi, contenuti esclusivi, series e podcast. Disponibile anche su app per Android, Huawei e iOS.</p></h4>
+                    <div class="line-height-sm no-margin"> </div>
+
+                </div>
+                    </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12 text-right text-center-xs">
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<div class="relative-container text-center">
+    
+    <div class="thumbnail thumbnail-fixed-height-countdown thumbnail-white thumbnail-toolbar no-border border-gray with-shadow no-padding margin-top-big margin-bottom-big no-padding-xs">
+        <div class="row">
+            <div class="col-md-3 col-sm-3 col-xs-12 col-image-countdown">
+                     <a href="https://www.virginactive.it/reopening2021" target="_self" class="thumbnail-link hidden-xs">
+                                    <img class="img-fullheight-top hidden-xs" src="https://vai2018i1.azureedge.net/images/default-source/home-page/banner_comunicazione_servizio_2021.jpg?sfvrsn=97e7d997_0" alt="banner_comunicazione_servizio_2021" title="">
+
+                    </a>
+
+                    <img class="img-fullheight-top visible-xs" src="https://vai2018i1.azureedge.net/images/default-source/home-page/banner_comunicazione_servizio_2021.jpg?sfvrsn=97e7d997_0" alt="banner_comunicazione_servizio_2021" title="">
+            </div>
+            <div class="col-md-6 col-sm-5 col-xs-12 text-left no-padding">
+                     <a href="https://www.virginactive.it/reopening2021" target="_self" class="thumbnail-link">
+                <div class="no-margin-xs no-margin-sm padding-top-md padding-sm-top-sm padding-xs-left-sm">
+                        <div class="no-margin text-primary text-bold"><p style="color:#51465A;font-size:22px;">TORNA AD ALLENARTI IN TOTALE SICUREZZA<strong style="color:#222222;font-family:Arial, Helvetica, sans-serif;font-size:small;"></strong></p></div>
+                                            <h4><p style="color:#3c3c3c;font-size:16px;">I nostri Club sono aperti. Per la migliore esperienza di allenamento in un ambiente sano e sicuro, scopri le misure igienico-sanitarie e regole di comportamento per spazi fisici e modalit&agrave; di interazione.</p></h4>
+                    <div class="line-height-sm no-margin"> </div>
+
+                </div>
+                    </a>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-12 text-right text-center-xs">
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+</div>
+<div id="SiteContentPlaceholder_C005_Col00" class="sf_colsIn container padding-vertical-big padding-xs-vertical-md padding-sm-vertical-md" data-sf-element="Container" data-placeholder-label="Container">
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-5 col-sm-5 col-xs-12 padding-xs-bottom-md text-left">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h2>Corsi</h2>
+        </div>
+                <div class="padding-bottom-md ">
+            <h4><strong></strong></h4><h4>Con i corsi Virgin Active alleni <br>molto pi&ugrave; dei tuoi muscoli. </h4><h4><strong>Alleni la migliore versione di te</strong>.</h4><h4>Scopri le 4 dimensioni dell'allenamento: <br /><strong>Equilibrio</strong>,<strong> Stabilit&agrave;</strong>,<strong> Forza </strong>e<strong> Resistenza</strong><strong></strong>.</h4><h4></h4>
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary btn-lg " href="https://www.virginactive.it/corsi">
+                    Scopri i corsi
+                </a>
+
+                    <div class="margin-top-md">
+                <a class="text-uppercase btn btn-primary-light" href="#">
+                        <span class="icon-calendar margin-right-sm primary"></span>
+                    <span class="text-vertical-align-middle">Calendario corsi</span>
+                </a>
+                    </div>
+        </div>
+    </div>
+
+            </div>
+            <div class="col-md-7 col-sm-7 col-xs-12">
+            <div class="gallery-widget-img-ktou59n5 owl-carousel owl-theme owl-dot-right">
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/home-page/img_corsi_stabilita.jpg?sfvrsn=f4dc46e6_4' alt='img_corsi_stabilita' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/home-page/img_corsi_resistenza.jpg?sfvrsn=90797a35_2' alt='img_corsi_resistenza' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/home-page/533x313_dimensioni.jpg?sfvrsn=b18fe5d7_0' alt='533x313_dimensioni' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/home-page/533x313_equilibrio.jpg?sfvrsn=50571bd0_0' alt='533x313_equilibrio' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/home-page/533x313_forza.jpg?sfvrsn=6bf8a4d8_0' alt='533x313_forza' title='' class="img-fullheight" />
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.gallery-widget-img-ktou59n5').owlCarousel({
+                        loop: true,
+                        margin: 0,
+                        nav: false,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 1
+                            },
+                            1000: {
+                                items: 1
+                            }
+                        }
+                    })
+                });
+            </script>
+            </div>
+
+</div>
+</div>
+<div id="SiteContentPlaceholder_C019_Col00" class="sf_colsIn container container-padded bg-white padding-vertical-big padding-xs-vertical-sm padding-sm-vertical-md" data-sf-element="Container" data-placeholder-label="Container">
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-7 col-sm-7 col-xs-12 padding-xs-bottom-md">
+            <div class="gallery-widget-img-7qp41i6e owl-carousel owl-theme owl-dot-left">
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/clubs/homepage/area-relax.jpg?sfvrsn=1628a441_0' alt='arearelax' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/clubs/homepage/3-boxe-palermo.jpg?sfvrsn=f9a76977_2' alt='3boxepalermo' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/clubs/homepage/6-reformer-palermo.jpg?sfvrsn=89de76a2_2' alt='6reformerpalermo' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/clubs/homepage/5-water-palermo.jpg?sfvrsn=4b86622_2' alt='5waterpalermo' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/clubs/homepage/2-grid-palermo.jpg?sfvrsn=ecbfb4a5_2' alt='2gridpalermo' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/clubs/palermo/722x420_palermo_yoga.jpg?sfvrsn=9c16aa78_0' alt='722x420_Palermo_Yoga' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/clubs/palermo/722x420_gui0327200bc2f4796f4a33b4f81fb8cfffdcbc.jpg?sfvrsn=b304d526_0' alt='722x420_cyclingPalermo' title='' class="img-fullheight" />
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.gallery-widget-img-7qp41i6e').owlCarousel({
+                        loop: true,
+                        margin: 0,
+                        nav: false,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 1
+                            },
+                            1000: {
+                                items: 1
+                            }
+                        }
+                    })
+                });
+            </script>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-12 padding-xs-bottom-md text-left">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h2>I Club pensati<strong>&nbsp;per te </strong></h2>
+        </div>
+                <div class="padding-bottom-md ">
+            <h4>Pensiamo&nbsp;<br />alle <strong>esigenze di tutti</strong>.<br /><br />Fitness, divertimento e benessere <br>senza limiti.&nbsp; </h4><h4><strong>Anytime, anywhere</strong>.&nbsp; </h4><p>&nbsp;</p><h4></h4>
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary-light btn-lg " href="https://www.virginactive.it/club">
+                    Scopri i club
+                </a>
+
+        </div>
+    </div>
+
+            </div>
+
+</div><div class="row" data-sf-element="Row">
+    <div id="SiteContentPlaceholder_C047_Col00" class="sf_colsIn col-md-6 col-sm-6 col-xs-12 padding-xs-bottom-md" data-sf-element="Column 1" data-placeholder-label="Column 1">
+
+
+
+
+<div class="row padding-vertical-md">
+        <div class="col-md-12 col-sm-12 col-xs-12  text-left">
+                <div class="bg-dark padding-big">
+        <div class="padding-bottom-md text-white">
+            <h4 class="text-center" style="text-align:left;"><strong>Club Collection</strong></h4>
+        </div>
+                <div class="padding-bottom-md text-white">
+            <p>Allenati in un ambiente speciale, dove il benessere &egrave; all-inclusive.&nbsp;</p><p>Fatti coccolare dal servizio concierge, rilassati nella business lounge, prova gli esclusivi macchinari della linea Artis di Technogym. </p><p>Benvenuto a casa, benvenuto in un <br /><strong>club Virgin Active Collection</strong>.</p>
+        </div>
+        <div class="">
+
+        </div>
+    </div>
+
+        </div>
+
+</div>
+    </div>
+    <div id="SiteContentPlaceholder_C047_Col01" class="sf_colsIn col-md-6 col-sm-6 col-xs-12 padding-xs-bottom-md" data-sf-element="Column 2" data-placeholder-label="Column 2">
+
+
+
+
+<div class="row padding-vertical-md">
+        <div class="col-md-12 col-sm-12 col-xs-12  text-left">
+                <div class="bg-primary padding-big">
+        <div class="padding-bottom-md text-white">
+            <h4 class="text-center" style="text-align:left;"><strong>Villaggi Fitness</strong></h4>
+        </div>
+                <div class="padding-bottom-md text-white">
+            <p>Rivoluziona la tua idea di benessere. </p><p>Prova i macchinari Technogym pi&ugrave; all'avanguardia, scopri l&rsquo;esclusiva piattaforma Grid per training funzionale, fai una pausa nei nostri caf&egrave; e lasciati coinvolgere dal mondo Virgin Active.&nbsp;</p><p>Benvenuto nei&nbsp;<strong>v</strong><strong>illaggi fitness.</strong><strong><br /></strong></p>
+        </div>
+        <div class="">
+
+        </div>
+    </div>
+
+        </div>
+
+</div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-7 col-sm-7 col-xs-12 padding-xs-bottom-md">
+            <div class="gallery-widget-img-bzpu1fln owl-carousel owl-theme owl-dot-left">
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/revbike/revohp/925x545_rev_2.jpg?sfvrsn=d88e7be6_0' alt='925X545_REV_2' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/revbike/revohp/925x545_5.jpg?sfvrsn=df381e65_0' alt='925x545_5' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/revbike/revohp/925x545_3.jpg?sfvrsn=ad6b5015_0' alt='925x545_3' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/revbike/revohp/925x545_4.jpg?sfvrsn=a1358c8c_0' alt='925x545_4' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/revbike/revohp/925x545_2.jpg?sfvrsn=2f875350_0' alt='925x545_2' title='' class="img-fullheight" />
+                </div>
+                <div class="item">
+                    <img src='https://vai2018i1.azureedge.net/images/default-source/revbike/revohp/925x545_1.jpg?sfvrsn=b82b7d8c_0' alt='925x545_1' title='' class="img-fullheight" />
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.gallery-widget-img-bzpu1fln').owlCarousel({
+                        loop: true,
+                        margin: 0,
+                        nav: false,
+                        autoplay: true,
+                        autoplayTimeout: 3000,
+                        autoplayHoverPause: true,
+                        responsive: {
+                            0: {
+                                items: 1
+                            },
+                            600: {
+                                items: 1
+                            },
+                            1000: {
+                                items: 1
+                            }
+                        }
+                    })
+                });
+            </script>
+            </div>
+            <div class="col-md-5 col-sm-5 col-xs-12 padding-xs-bottom-md text-left">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h2>Virgin Active Revolution</h2>
+        </div>
+                <div class="padding-bottom-md ">
+            <h4>L'estensione digitale dell'esperienza di allenamento Virgin Active.&nbsp; </h4><h4>Tante discipline cariche di energia per un workout innovativo. </h4>
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary-light btn-lg " href="https://www.virginactive.it/revolution" target="_blank">
+                    SCOPRI REVOLUTION
+                </a>
+
+        </div>
+    </div>
+
+            </div>
+
+</div>
+</div>
+<div id="SiteContentPlaceholder_C030_Col00" class="sf_colsIn container container-padded bg-white padding-vertical-big  padding-xs-vertical-sm padding-sm-vertical-md" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="SiteContentPlaceholder_C031_Col00" class="sf_colsIn col-md-12 col-sm-12 col-xs-12" data-sf-element="Column 1" data-placeholder-label="Column 1"><div class="bg-tour-virtuale position-relative bg-img-tour-virtuale">
+    <div class="bg-overlay-tour-virtuale">
+        <div class="content-tour-virtuale">
+            <h3 class="text-white text-uppercase text-center">Tour <strong>Virtuale</strong></h3>
+            <app-club-component place='homepage'></app-club-component>
+        </div>
+        <a class="header-page-buttonbottom text-uppercase btn btn-xs btn-link-white btn-link" href="https://www.virginactive.it/vieni-a-trovarci" target="_self">
+            <span class="icon-star white margin-left-md text-vertical-align-middle"></span>
+            <span class="text-vertical-align-middle display-inline-block">vieni a trovarci</span>
+        </a>
+    </div>
+</div>
+    </div>
+</div>
+
+</div>
+<div id="SiteContentPlaceholder_C020_Col00" class="sf_colsIn container container-padded bg-white padding-vertical-big  padding-xs-vertical-sm padding-sm-vertical-md" data-sf-element="Container" data-placeholder-label="Container">
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-6 col-sm-6 col-xs-12 padding-xs-bottom-md text-left">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h2>I nostri <strong>trainer</strong><br />per i tuoi <strong>obiettivi</strong></h2>
+        </div>
+                <div class="padding-bottom-md ">
+            <h4>Scegliamo i migliori trainer per la tua forma fisica perch&eacute; il nostro obiettivo &egrave; rendere il tuo <strong>allenamento irresistibile</strong>.&nbsp;<strong></strong></h4>
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary-light btn-lg " href="https://www.virginactive.it/trainer">
+                    Scopri i trainer
+                </a>
+
+        </div>
+    </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+            <img src='https://vai2018i1.azureedge.net/images/default-source/home-page/722x384_pt_2.jpg?sfvrsn=ecebeaf8_2' alt='722x384_pt_2' title='' class="img-fullheight" />
+            </div>
+
+</div>
+</div>
+<div class="container-fluid bg-grey-white">
+    <div id="SiteContentPlaceholder_C021_Col00" class="sf_colsIn hidden-sm hidden-xs container padding-vertical-big" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="SiteContentPlaceholder_C034_Col00" class="sf_colsIn col-md-6 col-sm-12 padding-sm-bottom-md col-xs-12 padding-xs-bottom-md" data-sf-element="Column 1" data-placeholder-label="Column 1">
+
+
+
+
+<div class="row padding-vertical-md">
+        <div class="col-md-12 col-sm-12 col-xs-12  text-left">
+                <div class=" ">
+        <div class="padding-bottom-md ">
+            <h1>Scopri perch&eacute;<br />Virgin Active &egrave;&nbsp;irresistibile</h1>
+        </div>
+                <div class="">
+
+        </div>
+    </div>
+
+        </div>
+
+</div>
+    </div>
+    <div id="SiteContentPlaceholder_C034_Col01" class="sf_colsIn col-md-6 col-sm-12 padding-sm-bottom-md col-xs-12 padding-xs-bottom-md" data-sf-element="Column 2" data-placeholder-label="Column 2">
+    </div>
+</div>
+<div class="row" data-sf-element="Row">
+    <div id="SiteContentPlaceholder_C035_Col00" class="sf_colsIn col-md-6 col-sm-12 padding-sm-bottom-md col-xs-12 padding-xs-bottom-md" data-sf-element="Column 1" data-placeholder-label="Column 1">
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-6 col-sm-6 col-xs-12 padding-xs-bottom-md text-left">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h3>Soluzioni<br />per le aziende<br /></h3>
+        </div>
+                <div class="padding-bottom-md ">
+            <h5>Regala ai tuoi dipendenti un'esperienza di allenamento, divertimento e benessere.</h5>
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary-light btn-lg " href="https://www.virginactive.it/corporate/soluzioni-per-aziende">
+                    Aziende
+                </a>
+
+        </div>
+    </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+            <img src='https://vai2018i1.azureedge.net/images/default-source/default-album/531x531_aziende_2020.jpg?sfvrsn=7a0b60d2_0' alt='531x531_aziende_2020' title='' class="img-fullheight" />
+            </div>
+
+</div>
+    </div>
+    <div id="SiteContentPlaceholder_C035_Col01" class="sf_colsIn col-md-6 col-sm-12 padding-sm-bottom-md col-xs-12 padding-xs-bottom-md" data-sf-element="Column 2" data-placeholder-label="Column 2">
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-6 col-sm-6 col-xs-12 padding-xs-bottom-md text-right">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h3>Academy</h3>
+        </div>
+                <div class="padding-bottom-md ">
+            <h6>&nbsp;La formazione &egrave; un valore importante per il raggiungimento dei tuoi obiettivi.<br>&nbsp;Virgin Active Academy &egrave; una scuola che prepara i professionisti del fitness ai livelli d'eccellenza.</h6>
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary-light btn-lg " href="https://www.virginactive.it/academy">
+                    Academy
+                </a>
+
+        </div>
+    </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+            <img src='https://vai2018i1.azureedge.net/images/default-source/home-page/531x531_hp_academy.jpg?sfvrsn=d1da14e4_2' alt='531x531_HP_academy' title='' class="img-fullheight" />
+            </div>
+
+</div>
+    </div>
+</div>
+
+    </div>
+</div><div class="container-fluid bg-grey-white">
+    <div id="SiteContentPlaceholder_C036_Col00" class="sf_colsIn container padding-vertical-big padding-xs-vertical-sm padding-sm-vertical-md visible-sm visible-xs" data-sf-element="Container" data-placeholder-label="Container">
+
+<div >
+    <div ><h2>Scopri perch&eacute; Virgin Active &egrave; irresistibile.</h2></div>    
+
+</div>
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-6 col-sm-6 col-xs-12 padding-xs-bottom-md text-left">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h3>Junior</h3>
+        </div>
+                <div class="padding-bottom-md ">
+            L'importanza dell'attività fisica fin da piccoli.
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary-light btn-md margin-right-md" href="https://www.virginactive.it/junior">
+                    junior
+                </a>
+
+        </div>
+    </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+            <img src='https://vai2018i1.azureedge.net/images/default-source/junior/2019-09-20-(1).jpg?sfvrsn=77999a1c_0' alt='2019-09-201' title='' class="img-fullheight" />
+            </div>
+
+</div>
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-6 col-sm-6 col-xs-12 padding-xs-bottom-md text-left">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h3>Soluzioni per le aziende<strong></strong></h3>
+        </div>
+                <div class="padding-bottom-md ">
+            Per l&rsquo;azienda che regala divertimento&nbsp; e benessere ai propri dipendenti.
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary-light btn-md margin-right-md" href="#">
+                    ABBONATI
+                </a>
+
+        </div>
+    </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+            <img src='https://vai2018i1.azureedge.net/images/default-source/default-album/531x531_aziende.jpg?sfvrsn=8ae9fc58_0' alt='531x531_aziende' title='' class="img-fullheight" />
+            </div>
+
+</div>
+
+
+
+
+<div class="row padding-vertical-md">
+            <div class="col-md-6 col-sm-6 col-xs-12 padding-xs-bottom-md text-left">
+                    <div class=" ">
+        <div class="padding-bottom-md ">
+            <h3>Academy</h3>
+        </div>
+                <div class="padding-bottom-md ">
+            <p>La Virgin Active Academy &egrave;&nbsp;una scuola che prepara&nbsp;i professionisti del Fitness ai massimi livelli.</p><p>La formazione &egrave; un valore importante per il raggiungimento dei tuoi obiettivi.</p>
+        </div>
+        <div class="">
+                <a class="text-uppercase btn btn-primary-light btn-md margin-right-md" href="#">
+                    ACADEMY
+                </a>
+
+        </div>
+    </div>
+
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+            <img src='https://vai2018i1.azureedge.net/images/default-source/accademylib/hp_trainer-academy.jpg?sfvrsn=1b024c98_0' alt='hp_trainer-academy' title='' class="img-fullheight" />
+            </div>
+
+</div>
+    </div>
+</div><div id="SiteContentPlaceholder_C042_Col00" class="sf_colsIn hidden container container-padded bg-white padding-top-big padding-xs-top-sm padding-sm-top-md" data-sf-element="Container" data-placeholder-label="Container"><div class="row" data-sf-element="Row">
+    <div id="SiteContentPlaceholder_C046_Col00" class="sf_colsIn col-md-12 col-sm-12 col-xs-12" data-sf-element="Column 1" data-placeholder-label="Press">
+
+<div >
+    <div ><div class="clearfix text-left-xs padding-xs-bottom-md"><a class="btn btn-link btn-link-base btn-sm text-uppercase text-bold pull-right no-pull-xs text-left-xs" href="/press/press-kit"><span class="icon-arrow-right dark margin-right-sm hidden-xs"></span><span class="text-vertical-align-middle">Vedi tutti</span></a>
+ </div><h3 class="no-margin padding-bottom-big">Rassegna stampa</h3></div>    
+
+</div>
+    </div>
+</div>
+
+</div>
+ </div> <footer id="site-footer"> <div class="container-fluid bg-white border-gray-top padding-top-md padding-bottom-md no-padding" id="preFooterSocial"> <div class="container"> <div class="row padding-top-md padding-bottom-md"> <div class="col-xs-12 text-center no-padding-xs"> 
+
+
+<div >
+    <div ><div><h5 class="hidden-xs text-vertical-align-middle display-inline-block margin-right-sm">Seguici sui nostri social</h5><h5 class="visible-xs">Seguici sui nostri social </h5><a class="margin-left-xs margin-right-xs" href="https://www.instagram.com/virginactiveit" target="_blank"><span class="icon-bubble icon-instagram-bubble bg-grey-dark"></span></a>
+<a class="margin-left-xs margin-right-xs" href="https://www.facebook.com/virginactiveIT" target="_blank"><span class="icon-bubble icon-facebook-bubble bg-grey-dark"></span></a>
+<a class="margin-left-xs margin-right-xs" href="https://twitter.com/virginactiveIT" target="_blank"><span class="icon-bubble icon-twitter-bubble bg-grey-dark"></span></a>
+<a class="margin-left-xs margin-right-xs" href="https://it.linkedin.com/company/virginactiveit" target="_blank"><span class="icon-bubble icon-linkedin-bubble bg-grey-dark"></span></a>
+<a class="margin-left-xs margin-right-xs" href="https://www.tiktok.com/@virginactiveit" target="_blank">
+<span class="icon-bubble  bg-grey-dark" style="display:inline-block;text-align:center;line-height:28px;">
+<img alt="tiktok" height="20" src="https://www.virginactive.it/images/default-source/logo/tiktok.png" width="20" /></span>
+</a>
+</div></div>    
+
+</div> </div> </div> </div> </div> <div class="container-fluid bg-brand padding-top-md padding-bottom-md" id="footerPages"> <div class="container container-padded"> 
+<div class="row" data-sf-element="Row">
+    <div id="FooterPagesPlaceholder_T29517ABA012_Col00" class="sf_colsIn col-md-1-5 col-sm-4 col-xs-12" data-sf-element="Column 1" data-placeholder-label="Column 1">
+
+<div >
+    <div ><h5 class="fclub"><span>Club</span><span class="icon-arrow pull-right visible-xs"></span></h5></div>    
+
+</div>
+
+
+
+    
+
+      <ul class="nav nav-footer fclub">
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club" target="_self">Tutti i CLUB</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/bologna/bologna-casalecchio" target="_self">Bologna</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/brescia/brescia" target="_self">Brescia</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/catania/catania" target="_self">Catania</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/firenze" target="_self">Firenze</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/genova/genova" target="_self">Genova</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/milano" target="_self">Milano</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/napoli/napoli-santa-lucia" target="_self">Napoli</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/palermo/palermo" target="_self">Palermo</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/perugia/perugia" target="_self">Perugia</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/prato/prato" target="_self">Prato</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/reggio-emilia/reggio-emilia" target="_self">Reggio Emilia</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/roma" target="_self">Roma</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/salerno-citta/salerno" target="_self">Salerno</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/torino" target="_self">Torino</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/venezia/venezia-mestre" target="_self">Venezia</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/club/verona/verona" target="_self">Verona</a>
+
+    </li>
+    </ul>
+
+
+
+
+
+
+    </div>
+     <div id="FooterPagesPlaceholder_T29517ABA012_Col01" class="sf_colsIn col-md-1-5 col-sm-4 col-xs-12" data-sf-element="Column 2" data-placeholder-label="Column 2">
+
+<div >
+    <div ><h5 class="fcorsi"><span>Corsi</span><span class="icon-arrow pull-right visible-xs"></span></h5></div>    
+
+</div>
+
+
+
+    
+
+      <ul class="nav nav-footer fcorsi">
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corsi" target="_self">Tutti i Corsi</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corsi/cycle" target="_self">CYCLE</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corsi/yoga" target="_self">Yoga</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corsi/functional-corsi" target="_self">Functional</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corsi/balance" target="_self">Balance</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corsi/water" target="_self">Water</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corsi/dance" target="_self">DANCE</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corsi/strength" target="_self">Strength</a>
+
+    </li>
+    </ul>
+
+
+
+
+
+
+    </div>
+     <div id="FooterPagesPlaceholder_T29517ABA012_Col02" class="sf_colsIn col-md-1-5 col-sm-4 col-xs-12" data-sf-element="Column 3" data-placeholder-label="Column 3">
+
+<div >
+    <div ><h5 class="ftrainer"><span>Trainer</span><span class="icon-arrow pull-right visible-xs"></span></h5></div>    
+
+</div>
+
+
+
+    
+
+      <ul class="nav nav-footer ftrainer">
+     <li class="">
+        <a class="text-uppercase text-bold" href="/people" target="_self">Tutti i TRAINER</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/redirect/personal-trainer" target="_self">Personal Trainer</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/redirect/group-trainer" target="_self">Group Trainer</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/redirect/gym-trainer" target="_self">Gym Trainer</a>
+
+    </li>
+    </ul>
+
+
+
+
+
+
+
+<div >
+    <div ><h5 class="fsoluzioni"><span>Soluzioni</span><span class="icon-arrow pull-right visible-xs"></span></h5></div>    
+
+</div>
+
+
+
+    
+
+      <ul class="nav nav-footer fsoluzioni">
+     <li class="">
+        <a class="text-uppercase text-bold" href="/academy" target="_self">Academy</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corporate/soluzioni-per-aziende" target="_self">Soluzioni per aziende</a>
+
+    </li>
+    </ul>
+
+
+
+
+
+
+
+<div >
+    <div ><h5 class="fservizi"><span>Servizi</span><span class="icon-arrow pull-right visible-xs"></span></h5></div>    
+
+</div>
+
+
+
+    
+
+      <ul class="nav nav-footer fservizi">
+     <li class="">
+        <a class="text-uppercase text-bold" href="/junior" target="_self">Junior</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/concierge" target="_self">Concierge</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="https://www.virginactive.it/docs/default-source/convenzioni/regolamento_op-virginactive_portaamico_gen23.pdf?sfvrsn=1bc2605f_2" target="_blank">Concorso</a>
+
+    </li>
+    </ul>
+
+
+
+
+
+
+    </div>
+     <div id="FooterPagesPlaceholder_T29517ABA012_Col03" class="sf_colsIn col-md-1-5 col-sm-4 col-xs-12" data-sf-element="Column 4" data-placeholder-label="Column 4">
+
+<div >
+    <div ><h5 class="flavora"><span>Lavora con noi</span><span class="icon-arrow pull-right visible-xs"></span></h5></div>    
+
+</div>
+
+
+
+    
+
+      <ul class="nav nav-footer flavora">
+     <li class="">
+        <a class="text-uppercase text-bold" href="/carriere" target="_self">Carriere</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/unisciti-a-noi" target="_self">Unisciti a noi</a>
+
+    </li>
+    </ul>
+
+
+
+
+
+
+
+<div >
+    <div ><h5 class="fcorporate"><span>Corporate</span><span class="icon-arrow pull-right visible-xs"></span></h5></div>    
+
+</div>
+
+
+
+    
+
+      <ul class="nav nav-footer fcorporate">
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corporate" target="_self">Corporate</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corporate/la-nostra-comunicazione" target="_self">La nostra comunicazione</a>
+
+    </li>
+     <li class="">
+        <a class="text-uppercase text-bold" href="/corporate/soluzioni-per-aziende" target="_self">Soluzioni per aziende</a>
+
+    </li>
+    </ul>
+
+
+
+
+
+
+
+<div >
+    <div ><h5 class="fcorporate"><span>Riferimenti</span><span class="icon-arrow pull-right visible-xs"></span></h5></div>    
+
+</div>
+
+
+
+    
+
+      <ul class="nav nav-footer fcorporate">
+     <li class="">
+        <a class="text-uppercase text-bold" href="/contatti" target="_self">Contatti</a>
+
+    </li>
+    </ul>
+
+
+
+
+
+
+    </div>
+    <div id="FooterPagesPlaceholder_T29517ABA012_Col04" class="sf_colsIn col-md-1-5 col-sm-4 col-xs-12" data-sf-element="Column 5" data-placeholder-label="Column 5"> 
+    <a target="_blank" href="https://www.virginactive.it/redirect/appstore"> 
+            <img class="img-responsive padding-bottom-md padding-top-md img-width190" src="https://vai2018i1.azureedge.net/images/default-source/default-album/appstore.png?sfvrsn=89e78b82_8" title="" alt="AppStore" 
+                
+                 /> 
+ 
+    </a> 
+  
+    <a target="_blank" href="https://www.virginactive.it/redirect/googleplay"> 
+            <img class="img-responsive padding-bottom-md padding-top-md img-width190" src="https://vai2018i1.azureedge.net/images/default-source/default-album/googleplay.png?sfvrsn=fcb6f545_12" title="" alt="Google Play" 
+                
+                 /> 
+ 
+    </a> 
+ 
+    </div>
+</div>
+ </div> </div> <div class="container container-padded bg-white border-gray-top padding-top-big padding-bottom-md" id="footerCopyright"> <div class="row"> <div class="col-xs-12 text-center"> 
+
+
+<div >
+    <div ><p class="text-center">&copy; Copyright 2018 Virgin Active. All rights reserved | <a href="/privacy-policy"><strong>Privacy Policy Sito, Club, Ecommerce</strong></a>&nbsp;| <a href="/privacy-policy-app"><strong>Privacy Policy App</strong></a> | <a href="/cookie"><strong>Cookie Policy</strong></a> | <a href="/termini-e-condizioni"><strong>Termini e condizioni</strong></a>&nbsp;|&nbsp;<a href="https://vai2018i1.azureedge.net/docs/default-source/legal/codice-etico-vai-16-01-2017.pdf?sfvrsn=1359944c_0" target="_blank"><strong>Codice etico</strong></a> |&nbsp;<a href="/mappa-del-sito"><strong>Mappa del sito</strong></a>&nbsp;
+</p></div>    
+
+</div> </div> </div> </div> <div class="container container-padded bg-white padding-top-md padding-bottom-big" id="footerInfo"> <div class="row"> <div class="col-xs-12 text-center no-padding"> 
+
+
+<div >
+    <div ><div class="text-center">Virgin Active Italia Spa<br />Via Archimede 2 - 20094 Corsico (MI) - Italia&nbsp; Iscritta al Registro delle Imprese di Milano REA n. 1690341 - P.IVA 03641880962&nbsp; Societ&agrave; a socio unico - soggetta a direzione e coordinamento di Virgin Active Group Ltd</div></div>    
+
+</div>
+
+<div >
+    <div ><div class="padding-top-md padding-bottom-md text-center"><div class="text-vertical-align-middle display-inline-block">Powered by</div><a href="http://www.gammastudiosrl.com/" target="_blank"><img alt="Gamma Studio" class="text-vertical-align-middle display-inline-block margin-left-sm margin-right-sm" data-displaymode="Original" src="https://vai2018i1.azureedge.net/images/default-source/default-album/gamma_footer.png?sfvrsn=8e9841f7_0" title="Gamma Studio" /></a><div class="text-vertical-align-middle display-inline-block margin-left-sm"></div></div></div>    
+
+</div> </div> </div> </div> </footer> <a href="#" id="back-to-top" title="Back to top"><span class="icon-arrow-up bg-grey-dark icon-bubble with-bottom-shadow-low"></span></a> <div class="social-share"> <ul> <li><a id="social-link-facebook" onclick="shareFacebook('https%3a%2f%2fwww.virginactive.it%2f');"><span class="icon-facebook"></span></a></li> <li class="visible-xs visible-sm visible-mobile"><a id="social-link-whatsapp" href="whatsapp://send?text=https%3a%2f%2fwww.virginactive.it%2f"><span class="icon-whatsapp"></span></a></li> <li><a id="social-link-twitter" class="with-bottom-shadow-low" href="https://twitter.com/intent/tweet?text=https%3a%2f%2fwww.virginactive.it%2f"><span class="icon-twitter"></span></a></li> </ul> </div> <script type="text/javascript">
+        $(document).ready(function () {
+            if(isMobile())
+            {
+                $(".visible-mobile").show();
+            }
+            else{
+                $(".visible-mobile").hide();
+            }
+        });
+    </script> <div id="login-modal" class="modal fade" tabindex="-1" role="dialog"> <div class="modal-dialog" role="document"> <div class="modal-content"> <div class="modal-header"> <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button> </div> <div class="modal-body"> 
+
+
+<div >
+    <div ><h6 class="text-center">Per prenotare un corso effettua il login</h6><h6 class="text-center">Non sei ancora socio? Abbonati ora.</h6><div class="padding-vertical-md text-center"><a class="text-uppercase btn btn-primary-light btn-lg margin-right-md no-margin-xs" href="/login">login</a> <a class="text-uppercase btn btn-primary-light btn-lg" href="https://shop.virginactive.it/account/login">abbonati</a></div></div>    
+
+</div> </div> <div class="modal-footer"> </div> </div> </div> </div> <script src="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/class-time-table/runtime-es2015.3f3fc55b246d2a4b8254.js" type="module"></script> <script src="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/class-time-table/polyfills-es2015.60a3a446e29136615763.js" type="module"></script> <script src="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/class-time-table/runtime-es5.96f7c8f8b53ed2a89900.js" nomodule></script> <script src="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/class-time-table/polyfills-es5.092ea1279282f25515a9.js" nomodule></script> <script src="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/class-time-table/main-es2015.b82c66467defb92dd02f.js" type="module"></script> <script src="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/class-time-table/main-es5.729c508ef46c634d9d77.js" nomodule></script> <script type="text/javascript" src="https://vai2018i1.azureedge.net/ResourcePackages/VAI/assets/dist/js/project.08b191e7.min.js"></script> <script type="text/javascript" src="/WebResource.axd?d=yAZznlIeaGQJz8qTi4uqDTDebcmkhk93rBCbdbUuQYLbOMreNdx-IrzmUl62Of0tqY49Q0VBZj80wx553QpFeIZjoumRfQA71wm6V5QXKeAWu8WDgcZAMow0IgjKrkLhLuEcm0T4aPit0VzGeHoiOHG8aoI1&amp;t=638010032331592430">
+
+</script><script type="text/javascript">
+	StatsClient.LogVisit('cbf9c6ed-6ad7-4059-8330-4443417d66ee', 'cbd0a608-a023-4acb-ac82-8712815ae16b');
+</script> <script>
+
+    $(document).ready(function () {
+
+        function sendLeadToAnalytics() {
+
+            var dataStr = getCookie('SENDLEADTOANALYTICS');
+
+            if (typeof dataStr !== 'undefined') {
+
+                try {
+                    var dataObj = JSON.parse(dataStr);
+
+                    if (typeof dataObj['DataHash'] !== 'undefined' && typeof dataObj['Form'] !== 'undefined') {
+
+                        window.dataLayer = window.dataLayer || [];
+
+                        dataLayer.push({
+                            'event': 'userRegistrationNew',
+                            'dL_lead': dataObj['Form'],
+                            'dL_hashedPhone': dataObj['DataHash']
+                        });
+                    }
+                } catch (e) {
+
+                }
+
+                deleteCookie('SENDLEADTOANALYTICS');
+            }
+        }
+
+        sendLeadToAnalytics();
+    });
+
+</script> </body> </html>
